@@ -120,7 +120,7 @@ done <<< "$root_file"
 
 if [[ -n "$compile_diff" ]]; then
   info "latex diff" 
-  git-latexdiff --verbose --main "$root_file" --bibtex --no-view -o diff.pdf --cleanup all HEAD~ --
+  git-latexdiff --verbose --main "$root_file" --run-bibtex --no-view -o diff.pdf HEAD~ --
 fi
 
 if [[ -n "$with_stats" ]]; then
